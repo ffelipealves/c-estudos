@@ -24,7 +24,7 @@ int main(){
     printf("Digite tres lados para um triangulo\n");
     scanf("%f%f%f",&ladoa,&ladob,&ladoc);
 
-    if(ladoa < (ladob + ladoc) || ladob < (ladoa + ladoc) || ladoc < (ladoa + ladob)){
+    if(ladoa < (ladob + ladoc) && ladob < (ladoa + ladoc) && ladoc < (ladoa + ladob)){
         if(ladoa==ladob && ladob==ladoc){
             printf("\nTriangulo Equilatero\n");
         }else if(ladoa!=ladob && ladob!=ladoc && ladoc!=ladob && ladoa!=ladoc){

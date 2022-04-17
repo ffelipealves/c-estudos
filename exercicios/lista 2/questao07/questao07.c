@@ -17,20 +17,10 @@ int main(){
     switch(letra){
 
     case 'A':
-        printf("Essa letra eh vogal");
-        break;
     case 'E':
-        printf("Essa letra eh vogal");
-        break;
     case 'O':
-        printf("Essa letra eh vogal");
-        break;
     case 'a':
-        printf("Essa letra eh vogal");
-        break;
     case 'e':
-        printf("Essa letra eh vogal");
-        break;
     case 'o':
         printf("Essa letra eh vogal");
         break;
