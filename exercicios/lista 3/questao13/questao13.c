@@ -31,4 +31,20 @@ int main(){
         printf("\nnao eh primo\n");
     }
 
+    //UMA FORMA MELHOR
+    /*
+    for(i=0;i<=numero/2;i++){
+        if(mumero%i==0){
+            divisores++;
+        }
+
+    }
+    if(divisores>2){
+        printf("nao eh primo");
+    }else if(divisores==2){
+        printf(""eh primo)
+    }
+
+    */
+
 }

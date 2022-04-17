@@ -32,6 +32,14 @@ int main(){
 
     }
 
-
+ //Melhor Maneira
+ /*
+ for(i=1;i<=y;i++){
+    printf("%d ",i);
+    if(i%x==0){
+        printf("\n");
+    }
+ }
+ */
 
 }

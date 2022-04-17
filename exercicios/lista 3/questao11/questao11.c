@@ -10,16 +10,16 @@ se torne menor que 0,05 gramas.
 int main(){
 
     float massa;//massa com input do usuario
-    int contador=0;//contador para multiplicar pelos segundos
+    int tempo=0;//contador para multiplicar pelos segundos
 
     printf("Digite a massa do material radioativo: ");
     scanf("%f",&massa);
 
     while(massa>=0.05){//enquanto a massa for maior de 0.05 iremos
         massa=massa/2; //dividir a massa pela metade
-        contador++;//somaremos mais um no contador como se tivessem passado 50 segundos
+        tempo++;//somaremos mais um no contador como se tivessem passado 50 segundos
     }
-    printf("Seu material demorou %d segundos para ficar com menos que 0.05 gramas",contador*50);
+    printf("Seu material demorou %d segundos para ficar com menos que 0.05 gramas",tempo*50);
 
 
 }

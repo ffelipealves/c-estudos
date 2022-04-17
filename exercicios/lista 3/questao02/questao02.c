@@ -21,4 +21,13 @@ int main(){
                           //repita o processo
     printf("Acesso Liberado");
 
+   //OUTRO MODO
+   /* printf("Digite a senha do seu cartao: ");
+    scanf("%d",&senha);
+
+    while(senha!=123456){
+        printf("senha invalida\n");
+        scanf("%d",&senha);
+    }
+    printf("Acesso permitido\n") */
 }

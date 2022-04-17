@@ -10,8 +10,11 @@ int main(){
 
     int A=0,n,contador;//inicializamos 3 variaveis A = soma de 1 ate n, n= Limite da Soma, Contador
 
-    printf("Digite um valor para n: ");
-    scanf("%d",&n);//pegamos n do usuario
+    do{
+        printf("Digite um valor para n: ");
+        scanf("%d",&n);//pegamos n do usuario
+    }while(n<1);
+
 
     for(contador=1;contador<=n;contador++){//utilizamos o contador para contar de 1 ate n;
         A=A+contador;//atribuimos a soma de 1 ate n em A

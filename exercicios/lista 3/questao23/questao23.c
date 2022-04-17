@@ -21,12 +21,12 @@ int main(){
 
     int i,j,x=1;
 
-    for(i=0;i<8;i++){//usado para pular linha
-        for(j=0;j<x;j++){//ira printar '*' X vezes
+    for(i=1;i<=82;i++){//usado para pular linha
+        for(j=0;j<i;j++){//ira printar '*' X vezes
             printf("*");
         }
         printf("\n");//ira pular a linha para printar mais x '*'
-        x++;//aumentara a quantidade de prints de '*'
+        //x++;//aumentara a quantidade de prints de '*'
     }
 
 

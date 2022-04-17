@@ -9,13 +9,13 @@ dia, e assim por diante. Faça um programa para calcular quanto você terá ao f
 
 int main(){
 
-    float dinheiro=0.01,soma;//iniciamos 3 variaveis, dinheiro com 1 centavo guardado
+    float dinheiro=1,soma;//iniciamos 3 variaveis, dinheiro com 1 centavo guardado
     int dias;               //soma para o dinheiro guardado e dias para os dias e sera usado como contador do for
 
 
-    for(dias=1;dias<=30;dias++){
-        dinheiro=dinheiro*2;//multiplicamos por 2 o dinheiro a cada dia
+    for(dias=1;dias<=29;dias++){
+        dinheiro=dinheiro*2.0;//multiplicamos por 2 o dinheiro a cada dia
         soma=soma+dinheiro;//depois somamos o dinheiro ao dinheiro ja guardado
     }
-    printf("\nDinheiro Guardado = %.2f\n",soma);
+    printf("\nDinheiro Guardado = %.2f\n",soma/100.0);
 }

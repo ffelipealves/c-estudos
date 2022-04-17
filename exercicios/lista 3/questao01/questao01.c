@@ -9,9 +9,10 @@ int main(){
 
     int numero,i;//inicializamos duas variveis um pra receber o input
                 //e outra para ser contador
-
-    printf("Digite um numero para exibir sua tabuada: ");
-    scanf("%d",&numero);
+    do{
+        printf("Digite um numero para exibir sua tabuada: ");
+        scanf("%d",&numero);
+    }while(numero<0 || numero>10);
 
     for(i=0;i<=10;i++){//usaremos o contador i como o outro elemento
                         // da multiplicação assim incrementamos ele a cada

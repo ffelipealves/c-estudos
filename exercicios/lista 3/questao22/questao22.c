@@ -13,8 +13,8 @@ int main(){
     int contadorAnos=0;
 
     while(alturaChico>alturaZe){//enquanto a altura de chico for maior vamos somando as alturas e contabilizando os anos
-        alturaChico=alturaChico+0.2;
-        alturaZe=alturaZe+0.3;
+        alturaChico=alturaChico+0.02;
+        alturaZe=alturaZe+0.03;
         contadorAnos++;
     }
     printf("Levara %d anos para Ze ser maior que Chico",contadorAnos);//Dizemos o anos que levaram pro while parar
