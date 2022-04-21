@@ -23,11 +23,50 @@ int main(){
     int mat3[3][3] = {0};//sera preenchida com 0
 
     float mat4[4][5];
-    char mat5[10][10];
+    char mat5[3][4] = {'a','b','c','d','e','f','g','h','i','j','k','l'};
 
     //como imprimir o conteudo de uma matriz ?
 
+    int i , j;
 
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",mat1[i][j]);//fazemos 00,01,02
+        }                            //        10,11,12
+        printf("\n");                //        20,21,22
+    }
 
+    //iremos inserir valores na matriz
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("Digite o valor de [%d][%d]",i,j);
+            scanf("%d",&mat1[i][j]);
+        }
+    }
 
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",mat1[i][j]);
+        }
+        printf("\n");
+    }
+
+    //somando duas matrizes e armazenando numa terceira
+    int matrizA[3][3] = {1,8,7,4,5,2,1,9,0};
+    int matrizB[3][3] = {9,8,7,6,10,4,3,2,1};
+    int matrizSoma[3][3];
+
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            matrizSoma[i][j]=matrizA[i][j]*matrizB[i][j];
+        }
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",matrizSoma[i][j]);
+        }
+        printf("\n");
+    }
+    //preenchendo matriz randomicamente
+    //matrizSoma[i][j] = rand();
 }
