@@ -1,54 +1,57 @@
 #include<stdio.h>
-#include<stdlib.h>
+
 
 /*
-18) Foi feita uma pesquisa entre os habitantes de uma regiÃ£o e foram coletados os dados de idade,
-sexo (M/F) e salÃ¡rio de X pessoas (x deve ser informado pelo usuÃ¡rio). FaÃ§a um algoritmo que
+18) Foi feita uma pesquisa entre os habitantes de uma região e foram coletados os dados de idade,
+sexo (M/F) e salário de X pessoas (x deve ser informado pelo usuário). Faça um algoritmo que
 informe:
-a) a mÃ©dia de salÃ¡rio do grupo;
+a) a média de salário do grupo;
 b) a maior e a menor idade do grupo;
-c) a quantidade de mulheres com salÃ¡rio atÃ© R$2000,00
-
+c) a quantidade de mulheres com salário até R$2000,00.
 */
+
 
 int main(){
 
-    int pessoas,idade,contador,idadeMin=0,idadeMax=0,mulherSalario=0;
+    int pessoas,contador,idade,idadeMin=0,idadeMax=0,salarioF=0;
     char sexo;
     float salario,mediaSalario;
 
-    printf("Digite o numero de pessoas: ");
+
+    printf("Digite quantas pessoas serao consultadas: ");
     scanf("%d",&pessoas);
 
-    for(contador=pessoas;contador>0;contador--){
-        printf("Digite seu sexo(m ou f),sua idade e seu salario: ");
+
+    while(pessoas>0){
+
+        printf("Digite seu sexo(m ou f), idade, e salario: ");
         scanf(" %c %d %f",&sexo,&idade,&salario);
 
-        mediaSalario=mediaSalario+salario;
+        mediaSalario=mediaSalario+salario;//vai amazenar todos os salarios
+        contador++;                        //ira dividir a media
 
-        if(idadeMax<idade){
+        if(idade>idadeMax){ //ira armazenar a maior idade a cada iteracao
             idadeMax=idade;
         }
+
         if(idadeMin==0){
             idadeMin=idade;
-        }else if(idadeMin>idade){
+        }                   // ira armazenar a menor idade a cada iteracao
+        if(idade<idadeMin){
             idadeMin=idade;
         }
 
-        if(sexo='m' && salario<=2000){
-            mulherSalario++;
-        }
+
+        if(sexo=='f' && salario<=2000){
+            salarioF++;             //contara a quantidade de mulheres com
+        }                           //salario menor igual a 2000
 
 
+        pessoas--;//sera usado para parar o while
 
     }
 
-    printf("\nA mÃ©dia de salÃ¡rio do grupo: %d\nA maior idade do grupo: %d\nA menor idade do grupo: %d\nA quantidade de mulheres com salÃ¡rio atÃ© R$2000,00: %d",mediaSalario/pessoas,idadeMax,idadeMin,mulherSalario);
 
-
-
-    return 0;
+    printf("\nA media de salario do grupo: %f\nA maior idade: %d ,A menor idade: %d\nA quantidade de mulheres com salario ate R$2000,00: %d\n",mediaSalario/contador,idadeMax,idadeMin,salarioF);
 
 }
-
-
