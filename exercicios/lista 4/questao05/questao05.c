@@ -17,7 +17,7 @@ int main()
         printf("Digite a temperatura media do mes %d: ",i);
         scanf("%f",&tempMeses[i]);
     }
-    for(i=0; i<12; i++)
+    for(i=0; i<12; i++)             //percorre o vetor armazenando o menor e maior temperatura
     {
         if(tempMeses[i]>maiorTemp)
         {
@@ -31,7 +31,7 @@ int main()
         }
     }
     printf("\nMaior temp mes: ");
-    switch(maiorTempMes)
+    switch(maiorTempMes)            //switch case da maior temperatura
     {
     case 0:
         printf("Janeiro");
@@ -72,7 +72,7 @@ int main()
 
     }
     printf("\nMenor temp mes: ");
-    switch(menorTempMes)
+    switch(menorTempMes)            //switch case da menor temperatura
     {
     case 0:
         printf("Janeiro");

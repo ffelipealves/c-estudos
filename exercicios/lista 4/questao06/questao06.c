@@ -15,24 +15,24 @@ int main()
     float numeros[10];
     int i,opcao;
 
-    for(i=0;i<10;i++){
+    for(i=0;i<10;i++){                                          //preenche o vetor com o input do usuario
         printf("Digite o valor para o vetor posicao %d: ",i);
         scanf("%f",&numeros[i]);
     }
 
     do{
-        printf("\n\n0-Sair do programa\n1-Imprima o vetor\n2-Imprima o vetor invertido\n\n");
+        printf("\n\n0-Sair do programa\n1-Imprima o vetor\n2-Imprima o vetor invertido\n\n"); //menu
         scanf("%d",&opcao);
 
         switch(opcao){
 
         case 1:
-            for(i=0;i<10;i++){
+            for(i=0;i<10;i++){              //imprime o vetor do inicio ao fim
                 printf("%.2f ",numeros[i]);
             }
             break;
         case 2:
-            for(i=9;i>=0;i--){
+            for(i=9;i>=0;i--){              //imprime o vetor do fim ao inicio
                 printf("%.2f ",numeros[i]);
             }
             break;
