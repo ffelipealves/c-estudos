@@ -6,7 +6,7 @@ int main()
 {
 
     int player=0,opcao=1,vencedor=0;
-    char posicao,marca,jogoVelha[3][3]= {0};
+    char posicao,marca,jogoVelha[3][3]= {0},vitoria=0,i,j;
 
     do //RESETA O JOGO
     {
@@ -76,61 +76,117 @@ int main()
 
             //VERIFICANDO SE ALGUEM GANHOU
 
+            //VERIFICANDO AS LINHAS
+            for(i=0; i<3; i++)
+            {
+                for(j=0; j<3; j++)
+                {
+                    if(jogoVelha[i][j]==marca)
+                    {
+                        vitoria++;
+                    }
+                }
+                if(vitoria==3)
+                {
+                    printf("\n\tO JOGADOR %d VENCEU!!!\n",player);
+                    vencedor=1;
+                    printf("\n\t#JOGO DA VELHA#\n\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\n",jogoVelha[0][0],jogoVelha[0][1],jogoVelha[0][2],jogoVelha[1][0],jogoVelha[1][1],jogoVelha[1][2],jogoVelha[2][0],jogoVelha[2][1],jogoVelha[2][2]);
+                    i=20;
+                }
+                else
+                {
+                    vitoria=0;
+                }
+            }
+
+            //VERIFICANDO AS COLUNAS
+            for(i=0; i<3; i++)
+            {
+                for(j=0; j<3; j++)
+                {
+                    if(jogoVelha[j][i]==marca)
+                    {
+                        vitoria++;
+                    }
+                }
+                if(vitoria==3)
+                {
+                    printf("\n\tO JOGADOR %d VENCEU!!!\n",player);
+                    vencedor=1;
+                    printf("\n\t#JOGO DA VELHA#\n\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\n",jogoVelha[0][0],jogoVelha[0][1],jogoVelha[0][2],jogoVelha[1][0],jogoVelha[1][1],jogoVelha[1][2],jogoVelha[2][0],jogoVelha[2][1],jogoVelha[2][2]);
+                    i=20;
+                }
+                else
+                {
+                    vitoria=0;
+                }
+            }
+
+            //VERIFICANDO A DIAGONAL PRINCIPAL
+            for(i=0; i<3; i++)
+            {
+                for(j=0; j<3; j++)
+                {
+                    if(i==j)
+                    {
+                        if(jogoVelha[i][j]==marca)
+                        {
+                            vitoria++;
+                        }
+                    }
+
+                }
+                if(vitoria==3)
+                {
+                    printf("\n\tO JOGADOR %d VENCEU!!!\n",player);
+                    vencedor=1;
+                    printf("\n\t#JOGO DA VELHA#\n\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\n",jogoVelha[0][0],jogoVelha[0][1],jogoVelha[0][2],jogoVelha[1][0],jogoVelha[1][1],jogoVelha[1][2],jogoVelha[2][0],jogoVelha[2][1],jogoVelha[2][2]);
+                    i=20;
+                }
+                else
+                {
+                    vitoria=0;
+                }
+            }
+
+            //VERIFICANDO A DIAGONAL SECUNDARIA
+            for(i=0; i<3; i++)
+            {
+                for(j=0; j<3; j++)
+                {
+                    if(jogoVelha[i][j]==marca)
+                    {
+                        vitoria++;
+                    }
+                }
+                if(vitoria==3)
+                {
+                    printf("\n\tO JOGADOR %d VENCEU!!!\n",player);
+                    vencedor=1;
+                    printf("\n\t#JOGO DA VELHA#\n\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\t  -   -   -\n\t  %c | %c | %c\n\n",jogoVelha[0][0],jogoVelha[0][1],jogoVelha[0][2],jogoVelha[1][0],jogoVelha[1][1],jogoVelha[1][2],jogoVelha[2][0],jogoVelha[2][1],jogoVelha[2][2]);
+                    i=20;
+                }
+                else
+                {
+                    vitoria=0;
+                }
+            }
+
+
         }
         //CONTINUAR O JOGO OU NAO
-        do{
+        do
+        {
             printf("\nVoce quer jogar dnovo ?(1-Sim,2-Nao): ");
             scanf("%d",&opcao);
-            if(opcao!=1 && opcao!=2){
+            if(opcao!=1 && opcao!=2)
+            {
                 printf("\nOpcao Invalida!!\n");
             }
-        }while(opcao!=1 && opcao!=2);
+        }
+        while(opcao!=1 && opcao!=2);
 
-    }while(opcao==1);
-}
-
-
-/*
-if(jogoVelha[0][0]==marca && jogoVelha[0][1]==marca && jogoVelha[0][2]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[1][0]==marca && jogoVelha[1][1]==marca && jogoVelha[1][2]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[2][0]==marca && jogoVelha[2][1]==marca && jogoVelha[2][2]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[0][0]==marca && jogoVelha[1][0]==marca && jogoVelha[2][0]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[0][1]==marca && jogoVelha[1][1]==marca && jogoVelha[2][1]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[0][2]==marca && jogoVelha[1][2]==marca && jogoVelha[2][2]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[0][0]==marca && jogoVelha[1][1]==marca && jogoVelha[2][2]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
-}
-if(jogoVelha[0][2]==marca && jogoVelha[1][1]==marca && jogoVelha[2][0]==marca)
-{
-printf("\n\tO JOGADOR %d GANHOU!!!\n",player);
-vencedor=player;
+    }
+    while(opcao==1);
 }
 
-}
-*/
