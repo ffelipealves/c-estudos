@@ -13,12 +13,7 @@ int main(){
     //INVERTEMOS OS INDICES DA MATRIZ TRANSPOSTA PARA PREENCHELA
     for(i=0;i<5;i++){
         for(j=0;j<4;j++){
-            if(i==4 && j==4){
-                i++;
-            }else{
-                matrizTransposta[j][i]=matriz[i][j];
-            }
-
+            matrizTransposta[j][i]=matriz[i][j];
 
         }
     }

@@ -25,14 +25,9 @@ int main(){
         for(j=0;j<4;j++){
             soma[i]=soma[i]+matrizMagica[i][j];//SOMANDO AS LINHAS
             soma[i+4]=soma[i+4]+matrizMagica[j][i];//SOMANDO AS COLUNAS
-            if(i==j){
-                soma[8]=soma[8]+matrizMagica[j][i];//SOMA A DIAGONAL PRINCIPAL
-            }
-            if(i+j==3){
-                soma[9]=soma[9]+matrizMagica[j][i];//SOMA A DIAGONAL SECUNDARIA
-            }
+            soma[8]=soma[8]+matrizMagica[i][i];//SOMA A DIAGONAL PRINCIPAL
+            soma[9]=soma[9]+matrizMagica[i][4-1-i];//SOMA A DIAGONAL SECUNDARIA
         }
-
     }
 
     if(soma[0] == soma[1]&&soma[1] == soma[2]&&soma[2] == soma[3]&&soma[3] == soma[4]&&soma[4] == soma[5]&&soma[5] == soma[6]&&soma[6] == soma[7]){
