@@ -14,7 +14,7 @@ int main()
 
     for(i=0; i<12; i++)
     {
-        printf("Digite a temperatura media do mes %d: ",i);
+        printf("Digite a temperatura media do mes %d: ",i+1);
         scanf("%f",&tempMeses[i]);
     }
     for(i=0; i<12; i++)             //percorre o vetor armazenando o menor e maior temperatura
