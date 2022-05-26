@@ -1,27 +1,47 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 
-void pedraPapelTesoura(int opcao){
+void print_ppt(int opcao)
+{
 
-    if(opcao==1){
-        printf("  _.-.-.-.\n ;_|_|_|_|_\n |_|_|\__  \ \n |    . '  ");
+    switch(opcao)
+    {
+    case 0:
+        printf("Pedra\n");
+        break;
+    case 1:
+        printf("Papel\n");
+        break;
+    case 2:
+        printf("Tesoura\n");
+        break;
     }
 
 
 }
 
+void vencedor(int jogada,int jogada2){
 
 
 
-void main(){
+}
 
-    int jogada;
+
+int main()
+{
+    //Gera numero aleatorio
+    time_t t;
+    srand((unsigned) time(&t));
+
+    int jogadaPlayer,jogadaComputador;
 
     printf("\n\tVamos jogar pedra papel e tesoura!!\n\nRegras:\tPedra vence Tesoura\n\tTesoura vence Papel\n\tPapel vence Pedra\n\n");
-    printf("\tEscolha [1]-Pedra [2]-Tesoura [3]-Papel: ");
-    scanf("%d",&jogada);
+    printf("\tEscolha [0]-Pedra [1]-Papel [2]-Tesoura: ");
+    scanf("%d",&jogadaPlayer);
 
-    pedraPapelTesoura(jogada);
+    jogadaComputador=(rand() % 3);
 
 
+    return 0;
 }
